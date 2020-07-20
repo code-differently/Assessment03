@@ -1,4 +1,16 @@
 package com.stayready.as03.problem05;
 
-public class BlueJay {
+public class BlueJay extends Bird
+{
+    public String color()
+    {
+        return "blue";
+    }
+
+    public int getSpeed()
+    {
+        int speed = 13;
+
+        return speed;
+    }
 }
