@@ -12,28 +12,28 @@ public class Problem03Test {
     public void setup(){
         solution = new Problem03();
     }
-
-    @Test
-    public void isPalindromeTest1(){
-        String input = "aaabbbb";
-        String expected = "YES";
-        String actual = solution.isPalindrome(input);
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void isPalindromeTest2(){
-        String input = "cdefghmnopqrstuvw";
-        String expected = "NO";
-        String actual = solution.isPalindrome(input);
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void isPalindromeTest3(){
-        String input = "cdcdcdcdeeeef";
-        String expected = "YES";
-        String actual = solution.isPalindrome(input);
-        Assert.assertEquals(expected, actual);
-    }
+//
+//    @Test
+//    public void canBePalindromeTest1(){
+//        String input = "aaabbbb";
+//        String expected = "YES";
+//        String actual = solution.canBePalindrome(input);
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void canBePalindromeTest2(){
+//        String input = "cdefghmnopqrstuvw";
+//        String expected = "NO";
+//        String actual = solution.canBePalindrome(input);
+//        Assert.assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void canBePalindromeTest3(){
+//        String input = "cdcdcdcdeeeef";
+//        String expected = "YES";
+//        String actual = solution.canBePalindrome(input);
+//        Assert.assertEquals(expected, actual);
+//    }
 }
