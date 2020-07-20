@@ -4,4 +4,5 @@ public interface Animal {
     String move();
     int getSpeed();
     String color();
+    int speed();
 }
