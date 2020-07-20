@@ -28,8 +28,9 @@ public class Problem00Test {
         String input = "that that is is that that is not is not is that it it is wutang";
         String expected =   "The 4 unique words are:\n" +
                 "that (Seen 5)\n" +
-                "is (Seen 5)\n" +
+                "is (Seen 6)\n" +
                 "not (Seen 2)\n"+
+                "it (Seen 2)\n"+
                 "wutang (Seen 1)";
         String actual = solution.countUniqueWords(input);
         Assert.assertEquals(expected, actual);

@@ -1,6 +1,6 @@
 package com.stayready.as03.problem03;
 
-import com.stayready.as03.problem03.Problem03;
+//import com.stayready.as03.problem03.Problem03;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
