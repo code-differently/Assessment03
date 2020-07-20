@@ -27,7 +27,8 @@ public class Problem04 {
 
         boolean canYouMakeMessage = true;
         for(Map.Entry<String, Integer> numWords: matchWordsToMagazine.entrySet()) {
-            if(numWords.getValue() != 0) {
+            //not enough words in the magazine
+            if(numWords.getValue() > 0) {
                 canYouMakeMessage = false;
                 break;
             }
