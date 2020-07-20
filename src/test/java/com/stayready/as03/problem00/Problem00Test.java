@@ -14,7 +14,7 @@ public class Problem00Test {
 
     @Test
     public void countUniqueWordsTest1(){
-        String input = "Hello Java. Hello World. Hello Java!";
+        String input = "Hello Java Hello World Hello Java ";
         String expected =   "The 3 unique words are:\n" +
                 "Hello (Seen 3)\n" +
                 "World (Seen 1)\n" +
