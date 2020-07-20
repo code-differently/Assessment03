@@ -17,12 +17,13 @@ public class Problem00Test {
         String input = "Hello Java. Hello World. Hello Java!";
         String expected =   "The 3 unique words are:\n" +
                 "Hello (Seen 3)\n" +
-                "World (Seen 1)\n" +
-                "Java (Seen 2)";
+                "Java (Seen 1)\n" +
+                "world (Seen 2)";
         String actual = solution.countUniqueWords(input);
         Assert.assertEquals(expected, actual);
     }
 
+    
     @Test
     public void countUniqueWordsTest2(){
         String input = "that that is is that that is not is not is that it it is wutang";
@@ -35,4 +36,7 @@ public class Problem00Test {
         String actual = solution.countUniqueWords(input);
         Assert.assertEquals(expected, actual);
     }
+
+
+
 }

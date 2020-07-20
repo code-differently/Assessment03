@@ -27,6 +27,6 @@ public class Problem04Test {
     public void harmlessRansomNoteTestPass(){
         String noteText = "this is a note for you from a secret admirer";
         Boolean actual = solution.harmlessRansomNote(noteText, magazineText);
-        Assert.assertTrue(actual);
+        Assert.assertFalse(actual);
     }
 }
