@@ -22,7 +22,7 @@ public class Problem03 {
                 countOdds++;
             }
         }
-        
+
         return countOdds > 1 ? "NO" : "YES";
     }
 }
