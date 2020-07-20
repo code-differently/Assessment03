@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class Problem01Test {
+public class  Problem01Test {
 
     private Problem01 weird;
 
