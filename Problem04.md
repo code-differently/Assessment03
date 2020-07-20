@@ -22,4 +22,4 @@ magazine_text= "puerto rico is a great place you must hike far from "
 +" it is not as hard as it seems this is my advice for you"
 ```
 
-The harmless ransom note will return ture because the word "secret" is used once and it's found once in the magazine text.
+The harmless ransom note will return true because the word "secret" is used once and it's found once in the magazine text.
