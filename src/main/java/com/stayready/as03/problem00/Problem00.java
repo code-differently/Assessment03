@@ -1,20 +1,31 @@
 package com.stayready.as03.problem00;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Problem00 {
     public String countUniqueWords(String input){
-        Set<String> uniquSet = new HashSet<>();
-        String [] words = input.split(" ");
-        String uniqueWords= "";
-        for(int i =0; i<words.length; i++)
-        {
-            uniquSet.add(words[i]);
-           
-        }
-        uniqueWords = uniquSet.toString();
-        
-        return uniqueWords;
+            String [] words = input.split(" ");
+            Integer wordCount = 1;
+            String unique ="";
+            for(int i = 0; i<words.length; i++)
+            {
+                for(int j = i+1; j< words.length; j++)
+                {
+                    if(words[i].equals(words[j]))
+                    {
+                        wordCount = wordCount +1;
+                        words[j]= "0";
+                    }
+                    
+
+                }
+                    if(words[i] != "0")
+                    {
+                        unique = unique + words[i] + "(seen " + Integer.toString(wordCount) + ")" + "\n";
+                    }
+                    wordCount = 1;
+            }
+
+
+        return unique;
     }
 }
