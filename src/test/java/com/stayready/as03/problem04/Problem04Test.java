@@ -1,8 +1,7 @@
 package com.stayready.as03.problem04;
 
-import com.stayready.as03.problem04.Problem04;
 import org.junit.Assert;
-import org.junit.Before;
+import org.junit.Before; 
 import org.junit.Test;
 
 public class Problem04Test {

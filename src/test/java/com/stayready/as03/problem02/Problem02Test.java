@@ -1,4 +1,4 @@
-package com.stayready.as03.problem02;
+package com.stayready.as03.problem02; 
 
 
 import org.junit.Assert;
