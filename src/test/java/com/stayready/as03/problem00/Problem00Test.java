@@ -26,7 +26,7 @@ public class Problem00Test {
     @Test
     public void countUniqueWordsTest2(){
         String input = "that that is is that that is not is not is that it it is wutang";
-        String expected =   "The 5 unique words are:\n" +
+        String expected =   "The 4 unique words are:\n" +
                 "that (Seen 5)\n" +
                 "is (Seen 6)\n" +
                 "not (Seen 2)\n"+
