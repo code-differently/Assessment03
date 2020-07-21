@@ -20,5 +20,6 @@ public class Problem02Test {
         int expected = 3;
         int actual = problem02.findNumberOfNonMatching(input);
         Assert.assertEquals(expected, actual);
+        System.out.println(actual);
     }
 }

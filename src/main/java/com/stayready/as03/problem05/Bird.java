@@ -1,8 +1,10 @@
 package com.stayready.as03.problem05;
 
-public abstract class Bird {
+public abstract class Bird implements Animal{
     public String move() {
-        return null;
+        String string = "";
+        string = "fly";
+        return string;
     }
 
     public void setMigrationMonth(String expected) {
