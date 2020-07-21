@@ -21,4 +21,5 @@ public class Problem02Test {
         int actual = problem02.findNumberOfNonMatching(input);
         Assert.assertEquals(expected, actual);
     }
+
 }
