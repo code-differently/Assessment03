@@ -5,13 +5,20 @@ import java.util.Map;
 
 public class Problem00 {
     public String countUniqueWords(String input){
-
+        int count = 0;
         String[] strArr = input.split("\\s+");
-        Map<String,String> uniqueMap = new LinkedHashMap<String, String>();
+        Map<String,Integer> uniqueMap = new LinkedHashMap<String, Integer>();
 
         for(int i = 0; i<strArr.length; i++){
+            for(int j=1; j<strArr.length;j++){
+                if(strArr[i].equals(strArr[j])){
+                    strArr[j] = "0";
+                    count++;
+                }
+            }
             if(uniqueMap.containsKey(strArr[i]))
-                uniqueMap.put(strArr[i], "Unique");
+                //uniqueMap.put(strArr[i], "Unique");
+                count++;
 
         }
 
