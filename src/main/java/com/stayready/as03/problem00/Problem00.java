@@ -11,6 +11,7 @@ public class Problem00 {
     }
 
     public String countUniqueWords(String input) {
+        //\\s is space in regex
         String[] inputArr =  input.replaceAll("[^A-Za-z0-9\\s]", "").split(" ");
         LinkedHashMap<String, Integer> uniqueWords = new LinkedHashMap<String, Integer>();
         for(String word: inputArr) {
