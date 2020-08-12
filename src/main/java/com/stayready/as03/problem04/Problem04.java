@@ -11,12 +11,12 @@ public class Problem04 {
         return doesMagazineHaveAllTheWordsNeeded(wordsOfRansom);
 
     }
-    private void fillAvailableWordsFromMagazine(String[] wordsOfMagazine) {
-        for(String word: wordsOfMagazine) matchWordsToMagazine.merge(word, 1, Integer::sum);
+    private void fillAvailableWordsFromMagazine(String[] magazineWords) {
+        for(String word: magazineWords) matchWordsToMagazine.merge(word, 1, Integer::sum);
     }
 
-    private boolean doesMagazineHaveAllTheWordsNeeded(String[] wordsOfRansom) {
-        for(String word: wordsOfRansom) {
+    private boolean doesMagazineHaveAllTheWordsNeeded(String[] ransomWords) {
+        for(String word: ransomWords) {
             if(matchWordsToMagazine.containsKey(word)) {
                 matchWordsToMagazine.put(word, matchWordsToMagazine.get(word) - 1);
             }
