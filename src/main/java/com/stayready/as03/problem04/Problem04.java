@@ -1,39 +1,30 @@
 package com.stayready.as03.problem04;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Problem04 {
-    public Boolean harmlessRansomNote(String message , String magazineText){
-        HashMap<String, Integer> matchWordsToMagazine = new HashMap<>();
-
-        String[] wordsOfMessage = message.split(" ");
+    HashMap<String, Integer> matchWordsToMagazine = new HashMap<>();
+    public Boolean harmlessRansomNote(String ransom , String magazineText){
+        String[] wordsOfRansom = ransom.split(" ");
         String[] wordsOfMagazine = magazineText.split(" ");
+        fillAvailableWordsFromMagazine(wordsOfMagazine);
+        return doesMagazineHaveAllTheWordsNeeded(wordsOfRansom);
 
-        for(String word: wordsOfMessage) {
-            if(matchWordsToMagazine.containsKey(word)) {
-                matchWordsToMagazine.put(word, matchWordsToMagazine.get(word) + 1);
-            }
-            else {
-                matchWordsToMagazine.put(word, 1);
-            }
-        }
+    }
+    private void fillAvailableWordsFromMagazine(String[] wordsOfMagazine) {
+        for(String word: wordsOfMagazine) matchWordsToMagazine.merge(word, 1, Integer::sum);
+    }
 
-        for(String word: wordsOfMagazine) {
+    private boolean doesMagazineHaveAllTheWordsNeeded(String[] wordsOfRansom) {
+        for(String word: wordsOfRansom) {
             if(matchWordsToMagazine.containsKey(word)) {
                 matchWordsToMagazine.put(word, matchWordsToMagazine.get(word) - 1);
             }
-        }
-
-        boolean canYouMakeMessage = true;
-        for(Map.Entry<String, Integer> numWords: matchWordsToMagazine.entrySet()) {
-            //not enough words in the magazine
-            if(numWords.getValue() > 0) {
-                canYouMakeMessage = false;
-                break;
+            //as soon as there is not a word available in the magazine, return false
+            if(matchWordsToMagazine.get(word) == -1) {
+                return false;
             }
         }
-
-        return canYouMakeMessage;
+        return true;
     }
 }

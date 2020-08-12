@@ -5,16 +5,16 @@ import java.util.HashSet;
 public class Problem02 {
 
     public int findNumberOfNonMatching(int[] ar) {
-        HashSet<Integer> pairs = new HashSet<>();
+        HashSet<Integer> numberOfSingleSocks = new HashSet<>();
         for(int sock: ar) {
-            if(pairs.contains(sock)) {
-                pairs.remove(sock);
+            if(numberOfSingleSocks.contains(sock)) {
+                numberOfSingleSocks.remove(sock);
             }
             else {
-                pairs.add(sock);
+                numberOfSingleSocks.add(sock);
             }
         }
-        return pairs.size();
+        return numberOfSingleSocks.size();
     }
 
 }
