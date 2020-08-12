@@ -1,28 +1,27 @@
 package com.stayready.as03.problem03;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Problem03 {
+    HashMap<Character, Integer> numTimes = new HashMap<>();
     public String isPalindrome(String input){
-        HashMap<Character, Integer> numTimes = new HashMap<>();
+
 
         for(char letter: input.toCharArray()) {
-            if(numTimes.containsKey(letter)) {
-                numTimes.put(letter, numTimes.get(letter) + 1);
-            }
-            else {
-                numTimes.put(letter, 1);
-            }
+                numTimes.merge(letter, 1, Integer::sum);
         }
 
-        int countOdds = 0;
-        for(Map.Entry<Character, Integer> element: numTimes.entrySet()) {
-            if(element.getValue() % 2 == 1) {
-                countOdds++;
-            }
-        }
+        return findNumberOfOddOccurrences() <= 1 ? "YES" : "NO";
+    }
 
-        return countOdds > 1 ? "NO" : "YES";
+    private int findNumberOfOddOccurrences() {
+        AtomicInteger countOdds = new AtomicInteger();
+        numTimes.forEach((key, value) -> {
+            if(value % 2 == 1) {
+                countOdds.getAndIncrement();
+            }
+        });
+        return countOdds.get();
     }
 }
