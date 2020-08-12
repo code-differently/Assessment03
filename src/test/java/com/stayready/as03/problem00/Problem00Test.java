@@ -5,12 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Problem00Test {
-    Problem00 solution;
-
-    @Before
-    public void setup(){
-        solution = new Problem00();
-    }
 
     @Test
     public void countUniqueWordsTest1(){
@@ -19,7 +13,7 @@ public class Problem00Test {
                             "Hello (Seen 3)\n" +
                             "World (Seen 1)\n" +
                             "Java (Seen 2)";
-        String actual = solution.countUniqueWords(input);
+        String actual = Problem00.countUniqueWords(input);
         Assert.assertEquals(expected, actual);
     }
 
@@ -32,7 +26,7 @@ public class Problem00Test {
                 "not (Seen 2)\n"+
                 "it (Seen 2)\n"+
                 "wutang (Seen 1)";
-        String actual = solution.countUniqueWords(input);
+        String actual = Problem00.countUniqueWords(input);
         Assert.assertEquals(expected, actual);
     }
 }

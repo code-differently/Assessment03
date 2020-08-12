@@ -2,7 +2,7 @@ package com.stayready.as03.problem01;
 
 public class Problem01 {
 
-    public String isThisWeird(int input){
+    public static String isWeird_v1(int input){
         String result = "";
         if (input % 2 == 1) {
             result =  "Weird";
@@ -14,5 +14,14 @@ public class Problem01 {
             result = "Not Weird";
         }
         return result;
+    }
+
+    public static String isWeird_v2(int input){
+        switch (input % 2){
+            case 0:
+                return input >= 6 && input <= 20 ? "Weird" : "Not Weird";
+            default:
+                return "Weird";
+        }
     }
 }
