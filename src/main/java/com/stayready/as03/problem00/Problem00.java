@@ -30,6 +30,6 @@ public class Problem00 {
         });
 
         String answer = buildAnswer.toString();
-        return answer.substring(0, answer.length() - 1); //removing the last \n
+        return answer.trim(); //removing the last \n
     }
 }
